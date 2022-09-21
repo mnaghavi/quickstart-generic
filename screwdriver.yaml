@@ -34,6 +34,7 @@ jobs:
       # the same job (as shown below).
       - export: export GREETING="Hello, world!"
       - hello: echo $GREETING
+      - test: docker build . --file Dockerfile --tag test
       # Metadata is a structured key/value storage of relevant information about a build. 
       # Metadata will be shared with subsequent builds in the same workflow.
       # You can set any key using the command "meta set <key> <value>".
