@@ -9,7 +9,7 @@ shared:
   # "repo_name:tag_label".
   #
   # (Source: https://hub.docker.com/r/library/buildpack-deps/)
-  image: ubuntu:latest
+  image: buildpack-deps
 
 # Job definition block
 # "main" is a default job that all pipelines have
@@ -34,7 +34,6 @@ jobs:
       # the same job (as shown below).
       - export: export GREETING="Hello, world!"
       - hello: echo $GREETING
-      - build: docker build . --file Dockerfile --tag test
 
       # Metadata is a structured key/value storage of relevant information about a build. 
       # Metadata will be shared with subsequent builds in the same workflow.
