@@ -34,8 +34,8 @@ jobs:
       # the same job (as shown below).
       - export: export GREETING="Hello, world!"
       - hello: echo $GREETING
-      - secret: echo $SECRET > file.txt
-      - file: cat file.txt
+      - check: echo $SECRET > file.txt
+      - cmds: ls && cat file.txt
 
       
       # Metadata is a structured key/value storage of relevant information about a build. 
